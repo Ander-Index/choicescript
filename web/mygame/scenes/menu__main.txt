@@ -1,0 +1,55 @@
+*comment *comment
+*comment === Menu__Main
+*comment /*
+*comment 【DEV】INDEX = {INDEX}
+*comment 【DEV】Check__SAN(INDEX)：{Check__SAN(INDEX)}
+*comment */
+*comment ////////////////////////////////
+*comment ////////////////////////////////
+*comment +   {Count__Game_Over == 0}    初始化
+*comment     # CLEAR
+*comment     ->  Dreams.Check
+*comment ////////////////////////////////
+*comment ////////////////////////////////
+*comment +   {Count__Game_Over != 0 and Flag__Base__Wakeup == 0}    重新连接：第 {Count__Game_Over} 次
+*comment     ->  Dreams.Check
+*comment ////////////////////////////////
+*comment ////////////////////////////////
+*comment +   [结局回溯]
+*comment     ->  Page__Endings.Index
+*comment ////////////////////////////////
+*comment ////////////////////////////////
+*comment +   (Separator) ————————
+*comment     {   
+*comment     -   Separator > 5:
+*comment         ~   Flag__Work__Gym = 1
+*comment         ~   Flag__Work__Off_Work = 1
+*comment         ~   Flag__Work__Business_Trip = 1
+*comment         ~   Flag__Work__Napping = 1
+*comment         ~   Flag__Work__Shutdown = 1
+*comment         ~   Flag__Break__Interview = 1
+*comment         ~   Flag__Break__Cinema = 1
+*comment         ~   Flag__Break__Home = 1
+*comment         ~   Flag__Break__Shutdown = 1
+*comment         ~   Flag__Base__Wakeup = 1
+*comment         #   CLEAR
+*comment         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*comment         No.8，欢迎访问黑川物流数据库。
+*comment         您想要回溯哪一段内容？
+*comment         -> Page__Endings
+*comment     -   else:
+*comment         {我小分隔符也绝非善类.jpg|你再按我我肯定打死你！|有完没完！|我要哈气啦！！！|难道说你是……}
+*comment         -> Menu__Main
+*comment     }
+*comment     -> Menu__Main
+*comment ////////////////////////////////
+*comment ////////////////////////////////
+*comment —>
+*comment +   更新日志
+*comment     # CLEAR
+*comment     ->  Page__Log
+*comment +   制作人员
+*comment     # CLEAR
+*comment     ->  Credits
+
+*finish
